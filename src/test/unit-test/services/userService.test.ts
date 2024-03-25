@@ -23,17 +23,17 @@ it('should fetch user data for a given userId', async () => {
     })
   );
 
-  // กำหนดให้ userId เป็น '1'
-  // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้.....
+  // // กำหนดให้ userId เป็น '1'
+  // const xxxxx = 'xxxxx';
 
-  // เรียกใช้ fetchUserData() โดยมี Parameter เป็น userId
-  // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้.....
+  // // เรียกใช้ fetchUserData() โดยมี Parameter เป็น userId
+  // const userData = await xxxxx.xxxxx(xxxxx);
 
-  // ตรวจสอบว่า fetch ถูกเรียกใช้งานอย่างถูกต้อง
-  // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้.....
+  // // ตรวจสอบว่า fetch ถูกเรียกใช้งานอย่างถูกต้อง
+  // expect(xxxxx).toHaveBeenCalledWith(`https://example.com/api/users/${xxxxx}`);
 
-  // ตรวจสอบข้อมูลผู้ใช้งานที่ได้รับ
-  // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้.....
+  // // ตรวจสอบข้อมูลผู้ใช้งานที่ได้รับ
+  // expect(xxxxx).xxxxx({ id: '1', name: 'John Doe', email: 'john@example.com' });
 });
 
 it('should handle fetch error', async () => {
@@ -42,6 +42,6 @@ it('should handle fetch error', async () => {
     Promise.reject(new Error('Failed to fetch'))
   );
 
-  // ตรวจสอบว่าการเรียกใช้ fetchUserData จะถูก reject ด้วยข้อผิดพลาดที่เหมาะสม
-  // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้.....
+  // // ตรวจสอบว่าการเรียกใช้ fetchUserData จะถูก reject ด้วยข้อผิดพลาดที่เหมาะสม
+  // await expect(xxxxx.xxxxx('1')).rejects.toThrow('Failed to fetch');
 });

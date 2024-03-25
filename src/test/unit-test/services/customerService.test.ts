@@ -6,11 +6,15 @@ const mockCustomerDetails: Customer = {
     email: 'john@example.com'
 };
 
-// กำหนด global.fetch ให้เป็น mock function ก่อนการทดสอบในแต่ละครั้ง
-// .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้..... //
+// // กำหนด global.fetch ให้เป็น mock function ก่อนการทดสอบในแต่ละครั้ง
+// xxxxx(() => {
+//     xxxxx.xxxxx = xxxxx.xxxxx() as jest.Mock;
+// });
 
-// ล้างการ mock หลังจากแต่ละการทดสอบ
-// .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้..... //
+// // ล้างการ mock หลังจากแต่ละการทดสอบ
+// xxxxx(() => {
+//     jest.restoreAllMocks();
+// });
 
 test('apiService.update is success and correct response', async () => {
     // // ตั้งค่า mock สำหรับ fetch
@@ -23,13 +27,13 @@ test('apiService.update is success and correct response', async () => {
     // const result = await apiService.update('123', mockCustomerDetails);
 
     // // ตรวจสอบค่าที่ได้จาก apiService กว่าตรงกับค่า mockCustomerDetails หรือไม่
-    // // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้..... //
+    // expect(xxxxx).xxxxx(xxxxx);
 
     // // ตรวจสอบว่ามีการเรียกใช้ fetch (global.fetch) หรือไม่
-    // // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้..... //
+    // expect(xxxxx.xxxxx).toHaveBeenCalledTimes(1);
 
     // // ตรวจสอบว่า fetch (global.fetch) มีการเรียกใช้ url ที่ถูกต้องหรือไม่
-    // expect(global.fetch).xxxxxxxxxx(`https://example.com/api/customers/123`, expect.any(Object));
+    // expect(global.fetch).toHaveBeenCalledWith(`https://example.com/api/customers/123`, expect.any(Object));
 });
 
 test('updateCustomerDetails calls apiService.update and return customer information', async () => {
@@ -43,7 +47,7 @@ test('updateCustomerDetails calls apiService.update and return customer informat
     // expect(xxxxx).xxxxxx(xxxxxx);
 
     // // ตรวจสอบว่า apiService.update ถูกเรียกใช้งานได้หรือไม่
-    // expect(xxxxx).xxxxx('123', mockCustomerDetails);
+    // expect(xxxxx.xxxxx).toHaveBeenCalledWith('123', mockCustomerDetails);
 });
 
 test('apiService.update fails when API responds with status not ok', async () => {
@@ -56,12 +60,12 @@ test('apiService.update fails when API responds with status not ok', async () =>
 
     // // พยายามเรียกใช้งานฟังก์ชัน apiService.update และจับข้อผิดพลาด
     // await expect(xxxxx.xxxxx('123', mockCustomerDetails))
-    //   .xxxxx
-    //   .xxxxx('API responded with status 500');
+    //   .rejects
+    //   .toThrow('API responded with status 500');
 
     // // ตรวจสอบว่ามีการเรียกใช้ fetch (global.fetch) หรือไม่
-    // // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้..... //
+    // expect(xxxxx.xxxxx).xxxxx(1);
 
     // // ตรวจสอบว่า fetch (global.fetch) มีการเรียกใช้ url ที่ถูกต้องหรือไม่
-    // // .....จงใส่โค้ดที่ถูกต้องของบรรทัดนี้..... //
+    // expect(xxxxx.xxxxx).xxxxx(`https://example.com/api/customers/123`, expect.any(Object));
 });
